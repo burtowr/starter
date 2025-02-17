@@ -1,3 +1,14 @@
-import eslintPluginPrettier from "eslint-plugin-prettier";
+import eslintPluginPrettier from 'eslint-plugin-prettier';
 
-export default [eslintPluginPrettier];
+export default {
+	extends: [
+		'eslint:recommended',
+		'plugin:vue/vue3-recommended',
+		'plugin:nuxt/recommended',
+		'prettier',
+	],
+	rules: {
+		'no-unused-vars': 'warn',
+		'no-undef': 'error',
+	},
+};
